@@ -1,4 +1,4 @@
-import { findCarValue } from '../services/findCarValue';
+import { findCarValue } from '../services/findCarValueServices';
 import { findCarValueTestCase } from '../types/findCarValueTestCase';
 
 const testCases: findCarValueTestCase[] = [
