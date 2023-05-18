@@ -4,7 +4,7 @@ export const findModelValue = (model: string | number) => {
     const alphabetUpper: string[] = alphabet.split('');
     const alphabetLower: string[] = alphabet.toLowerCase().split('')
     const modelLetters = model.toString().split('');
-    
+
     let modelValue: number = 0;
     let letterIndex: number = 0;
 
@@ -19,17 +19,3 @@ export const findModelValue = (model: string | number) => {
 
     return modelValue;
 }
-
-
-
-
-
-
-
-
-
-
-
-        // if (alphabet.includes(letter) || alphabet.toLowerCase().includes(letter)) {
-        //     modelValue += 
-        // }
