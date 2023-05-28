@@ -1,21 +1,21 @@
+export const findModelValue = (model: string | number): number => {
+  const alphabet: string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const alphabetUpper: string[] = alphabet.split("");
 
-export const findModelValue = (model: string | number) => {
-    const alphabet: string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    const alphabetUpper: string[] = alphabet.split('');
-    const alphabetLower: string[] = alphabet.toLowerCase().split('')
-    const modelLetters = model.toString().split('');
+  const modelLetters = model.toString().toUpperCase().split("");
 
-    let modelValue: number = 0;
+  let modelValue: number = 0;
+
+  modelLetters.forEach((modelLetter: string, index: number) => {
     let letterIndex: number = 0;
 
-    modelLetters.forEach((modelLetter:string, index:number) => {
-        if  (alphabetUpper.includes(modelLetter) || alphabetLower.includes(modelLetter)) {
-            letterIndex = alphabetUpper.findIndex((alphabetLetter) => {
-                modelLetter == alphabetLetter || modelLetter == alphabetLetter.toLowerCase()
-            });
-            modelValue += (letterIndex + 1) * 100;
-        }
-    })
+    if (alphabetUpper.includes(modelLetter)) {
+      letterIndex = alphabetUpper.findIndex((alphabetLetter) => {
+        return modelLetter === alphabetLetter;
+      });
+      modelValue += (letterIndex + 1) * 100;
+    }
+  });
 
-    return modelValue;
-}
+  return modelValue;
+};
