@@ -1,6 +1,6 @@
 export interface findCarValueTestCase {
     description: string,
     model: string | number,
-    year: number,
+    year: any,
     expected: number | string
 }
