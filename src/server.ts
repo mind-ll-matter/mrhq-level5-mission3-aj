@@ -1,15 +1,17 @@
-import express from "express";
-import env from "dotenv";
+import express from 'express'
+import env from 'dotenv'
+import cors from 'cors'
 // import { findCarValue } from './controllers/findCarValueController';
-import router from "./routes/findCarValueRoute";
+import router from './routes/findCarValueRoute'
 
-env.config();
-const server = express();
-server.use(express.json());
+env.config()
+const server = express()
+server.use(express.json())
+server.use(cors())
 
-server.use(router);
+server.use(router)
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000
 server.listen(PORT, () => {
-  console.log(`server started on port ${PORT}`);
-});
+  console.log(`server started on port ${PORT}`)
+})
