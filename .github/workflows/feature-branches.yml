@@ -2,7 +2,8 @@ name: Build and Test Features
 
 on:
   push:
-    branches: -feature/*
+    branches:
+      - feature/*
 jobs:
   build_test:
     runs-on: ubuntu-latest
