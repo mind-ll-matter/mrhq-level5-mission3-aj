@@ -10,7 +10,7 @@ export const findCarValue = (
     return 'there is an error'
   }
 
-  if (model.toString().trim().length == 0) {
+  if (typeof model == 'number' && model.toString().trim().length == 0) {
     return 'there is an error'
   }
   const modelValue: number = findModelValue(model)
