@@ -26,21 +26,21 @@ jobs:
         with:
           node-version: 18
 
-      - name: Set up Yarn
-        run: npm install -g yarn
-        #
+      # - name: Set up Yarn
+      #   run: npm install -g yarn
+      #
 
       - name: Install dependencies
-        run: yarn install
-        # run: npm install
+        # run: yarn install
+        run: npm install
 
       - name: Build
-        run: yarn run build
-        # run: npm run build
+        # run: yarn run build
+        run: npm run build
 
       - name: Run tests
-        run: yarn run test
-        # run: npm run test
+        # run: yarn run test
+        run: npm run test
 
         # NOTE: Alternative option - authentication via credentials json
       - name: Google Auth
