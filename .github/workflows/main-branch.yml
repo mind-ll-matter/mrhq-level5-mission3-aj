@@ -1,4 +1,4 @@
-name: Build and Test Main
+name: Build, Test and Deploy Main
 
 on:
   push:
@@ -14,7 +14,7 @@ env:
   REGION: australia-southeast2 # TODO: update Cloud Run service region
 
 jobs:
-  build_test:
+  build_test_deploy:
     runs-on: ubuntu-latest
 
     steps:

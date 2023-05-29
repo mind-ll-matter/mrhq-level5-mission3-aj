@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "yarn build && build/server.js",
     "build": "tsc",
     "test": "jest",
     "dev": "tsnd src/server.ts"
