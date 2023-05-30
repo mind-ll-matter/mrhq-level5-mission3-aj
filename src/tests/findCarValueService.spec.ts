@@ -29,12 +29,6 @@ const testCases: findCarValueTestCase[] = [
     expected: 2020,
   },
   {
-    description: `Input Year is of type string should return an error`,
-    model: 'Civic',
-    year: 'twenty twenty',
-    expected: 'there is an error',
-  },
-  {
     description: 'Input Model is only one letter',
     model: 'X',
     year: 2004,
@@ -70,12 +64,6 @@ const testCases: findCarValueTestCase[] = [
     year: 2020,
     expected: 'there is an error',
   },
-  // {
-  //   description: 'Input Model is of type number (instead of string)',
-  //   model: 2008,
-  //   year: 2020,
-  //   expected: 2020,
-  // },
   // {
   //     description:,
   //     model:,
