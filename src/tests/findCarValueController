@@ -1,0 +1,17 @@
+// import { findCarValue } from '../controllers/findCarValueController'
+// import { findCarValueTestCase } from '../types/findCarValueTestCase'
+
+// const testCases: findCarValueTestCase[] = [
+// {
+//   description: 'Input Model is of type number (instead of string)',
+//   model: 2008,
+//   year: 2020,
+//   expected: 2020,
+// },
+// {
+//     description: `Input Year is of type string should return an error`,
+//     model: 'Civic',
+//     year: 'twenty twenty',
+//     expected: 'there is an error',
+//   },
+// ]
