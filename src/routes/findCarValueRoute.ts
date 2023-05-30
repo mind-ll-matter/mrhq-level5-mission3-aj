@@ -3,6 +3,6 @@ const { findCarValue } = require('../controllers/findCarValueController')
 
 const router = express.Router()
 
-router.get('/find-car-value', findCarValue)
+router.get('/find-car-value/:model/:year', findCarValue)
 
 export default router

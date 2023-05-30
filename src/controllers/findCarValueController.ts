@@ -2,8 +2,8 @@ import { Request, Response } from 'express'
 import * as carValueService from '../services/findCarValueService'
 
 export const findCarValue = (req: Request, res: Response): void => {
-  const reqModel: any = req.body.model
-  const reqYear: any = req.body.year
+  const reqModel: any = req.params.model
+  const reqYear: any = req.params.year
 
   if (
     !reqModel ||
