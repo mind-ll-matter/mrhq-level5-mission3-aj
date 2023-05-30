@@ -77,7 +77,7 @@ describe('findCarValue', () => {
     test(t.description, () => {
       // Arrange
       const model: string = t.model
-      const year: number = t.year
+      const year: string = t.year
       const expected: string | number = t.expected
       // Act
       const actual: string | number = findCarValue(model, year)

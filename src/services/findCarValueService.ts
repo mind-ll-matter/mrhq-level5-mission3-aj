@@ -1,6 +1,11 @@
 import { findModelValue } from './functions/findModelValue'
 
-export const findCarValue = (model: string, year: number): number | string => {
+export const findCarValue = (
+  model: string,
+  yearStr: string
+): number | string => {
+  const year = Number(yearStr)
+
   if (year < 1886) {
     return 'there is an error'
   }
