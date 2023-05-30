@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
 import * as carValueService from '../services/findCarValueService'
 
-export const findCarValue = (req: Request, res: Response) => {
+export const findCarValue = (req: Request, res: Response): void => {
   const reqModel: any = req.body.model
   const reqYear: any = req.body.year
 
@@ -11,7 +11,7 @@ export const findCarValue = (req: Request, res: Response) => {
     typeof reqYear !== 'number' ||
     typeof reqModel !== 'string'
   ) {
-    return res.status(400).json({ error: 'there is an error' })
+    res.status(400).json({ error: 'there is an error' })
   }
 
   const model: string = req.body.model
@@ -19,8 +19,8 @@ export const findCarValue = (req: Request, res: Response) => {
   const carValue = carValueService.findCarValue(model, year)
 
   if (typeof carValue == 'string') {
-    return res.status(400).json({ error: 'there is an error' })
+    res.status(400).json({ error: 'there is an error' })
   } else {
-    return res.status(200).json({ car_value: `${carValue}` })
+    res.status(200).json({ car_value: `${carValue}` })
   }
 }
